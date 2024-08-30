@@ -1,3 +1,5 @@
+import { ingredients } from "./../../../prisma/constants";
+import { pizzaSizes } from "./../../constants/pizza";
 import {
   Cart,
   CartItem,
@@ -14,4 +16,9 @@ export type CartItemDTO = CartItem & {
 };
 export interface CartDTO extends Cart {
   items: CartItemDTO[];
+}
+
+export interface CreateCartItemValues {
+  productItemId: number;
+  ingredients: number[];
 }

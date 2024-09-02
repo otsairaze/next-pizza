@@ -20,7 +20,7 @@ export const CartButton: React.FC<Props> = ({ className }) => {
   return (
     <CartDrawer>
       <Button
-        disabled={loading}
+        loading={loading}
         className={cn("group relative", { "w-[105px]": loading }, className)}
       >
         <b>{totalAmount}</b>
